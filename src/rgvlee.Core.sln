@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rgvlee.Core.Common", "rgvlee.Core.Common\rgvlee.Core.Common.csproj", "{CE116A5F-68A8-4AFD-BDE2-C3522F6D747E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rgvlee.Core.Common.Tests", "rgvlee.Core.Common.Tests\rgvlee.Core.Common.Tests.csproj", "{0CF632A0-2BB0-4D12-B043-6271EFE06E23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F0FA746-D19F-449A-8D6B-C45C27D4A36D}"
+ProjectSection(SolutionItems) = preProject
+	..\.gitignore = ..\.gitignore
+	..\googlea6bd68d4a55b1e59.html = ..\googlea6bd68d4a55b1e59.html
+	..\LICENSE = ..\LICENSE
+	..\rgvlee.Core.nuspec = ..\rgvlee.Core.nuspec
+	..\README.md = ..\README.md
+	..\TODO.md = ..\TODO.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8F6B7100-6BE0-4C86-9FAA-E6C04C5D2F4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE116A5F-68A8-4AFD-BDE2-C3522F6D747E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE116A5F-68A8-4AFD-BDE2-C3522F6D747E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE116A5F-68A8-4AFD-BDE2-C3522F6D747E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE116A5F-68A8-4AFD-BDE2-C3522F6D747E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF632A0-2BB0-4D12-B043-6271EFE06E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF632A0-2BB0-4D12-B043-6271EFE06E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF632A0-2BB0-4D12-B043-6271EFE06E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF632A0-2BB0-4D12-B043-6271EFE06E23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E82F71E5-DAFA-4EA7-A4DB-645A32BB8068}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CF632A0-2BB0-4D12-B043-6271EFE06E23} = {8F6B7100-6BE0-4C86-9FAA-E6C04C5D2F4D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>rgvlee.Core.Common</name>
+    </assembly>
+    <members>
+        <member name="T:rgvlee.Core.Common.Extensions.StringExtensions">
+            <summary>
+                <see cref="T:System.String" /> extensions.
+            </summary>
+        </member>
+        <member name="M:rgvlee.Core.Common.Extensions.StringExtensions.Contains(System.String,System.String,System.StringComparison)">
+            <summary>
+                Checks to see if the target string contains the search for string using the specified string comparer.
+            </summary>
+            <param name="string">The string to search.</param>
+            <param name="searchFor">The string to search for within the string to search.</param>
+            <param name="comparer">The string comparer.</param>
+            <returns>true if the string to search contains the string to search for using the specified string comparer.</returns>
+        </member>
+        <member name="T:rgvlee.Core.Common.Extensions.TypeExtensions">
+            <summary>
+                <see cref="T:System.Type" /> extensions.
+            </summary>
+        </member>
+        <member name="M:rgvlee.Core.Common.Extensions.TypeExtensions.GetDefaultValue(System.Type)">
+            <summary>
+                Gets the default value for the specified type.
+            </summary>
+            <param name="type">The type to get the default value for.</param>
+            <returns>The default value for the specified type.</returns>
+        </member>
+        <member name="T:rgvlee.Core.Common.Helpers.EnsureArgument">
+            <summary>
+                A helper to perform checks on arguments.
+            </summary>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.EnsureArgument.IsNotNullOrEmpty(System.String,System.String)">
+            <summary>
+                Ensures that a string argument is not null or empty.
+            </summary>
+            <param name="argument">The string argument.</param>
+            <param name="argumentName">The argument name.</param>
+            <returns>The string argument.</returns>
+            <exception cref="T:System.ArgumentNullException">If the string argument is null.</exception>
+            <exception cref="T:System.ArgumentException">If the string argument is empty.</exception>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.EnsureArgument.IsNotNull``1(``0,System.String)">
+            <summary>
+                Ensures that an argument is not null.
+            </summary>
+            <typeparam name="T">The argument type.</typeparam>
+            <param name="argument">The argument.</param>
+            <param name="argumentName">The argument name.</param>
+            <returns>The argument.</returns>
+            <exception cref="T:System.ArgumentNullException">If the argument is null.</exception>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.EnsureArgument.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+                Ensures that a sequence is not empty.
+            </summary>
+            <typeparam name="T">The enumerable item type.</typeparam>
+            <param name="argument">The enumerable argument.</param>
+            <param name="argumentName">The enumerable argument name.</param>
+            <returns>The enumerable argument.</returns>
+        </member>
+        <member name="T:rgvlee.Core.Common.Helpers.LoggingHelper">
+            <summary>
+                Logging helper methods.
+            </summary>
+        </member>
+        <member name="P:rgvlee.Core.Common.Helpers.LoggingHelper.LoggerFactory">
+            <summary>
+                Gets or sets the logger factory used to create loggers.
+            </summary>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.LoggingHelper.CreateLogger``1">
+            <summary>
+                Creates a new logger instance using the full name of the specified type.
+            </summary>
+            <typeparam name="T">The type.</typeparam>
+            <returns>A new logger instance.</returns>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.LoggingHelper.CreateLogger(System.Type)">
+            <summary>
+                Creates a new logger instance using the full name of the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>A new logger instance.</returns>
+        </member>
+    </members>
+</doc>
