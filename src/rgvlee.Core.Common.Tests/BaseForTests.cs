@@ -17,8 +17,12 @@ namespace rgvlee.Core.Common.Tests
             Fixture = new Fixture();
         }
 
-        protected Fixture Fixture;
+        [TearDown]
+        public virtual void TearDown()
+        {
+            LoggingHelper.LoggerFactory.Dispose();
+        }
 
-        protected static readonly ILogger Logger = LoggingHelper.CreateLogger(typeof(BaseForTests));
+        protected Fixture Fixture;
     }
 }
