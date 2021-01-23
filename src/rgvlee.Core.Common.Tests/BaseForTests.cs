@@ -11,8 +11,8 @@ namespace rgvlee.Core.Common.Tests
         [SetUp]
         public virtual void SetUp()
         {
-            //LoggingHelper.LoggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Debug));
-            LoggingHelper.LoggerFactory = new LoggerFactory().AddConsole();
+            //LoggingHelper.LoggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Trace));
+            LoggingHelper.LoggerFactory = new LoggerFactory().AddConsole(LogLevel.Trace);
 
             Fixture = new Fixture();
         }
