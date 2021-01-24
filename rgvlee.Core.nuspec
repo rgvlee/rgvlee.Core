@@ -8,7 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE</license>
     <projectUrl>https://github.com/rgvlee/rgvlee.Core</projectUrl>
-    <description>rgvlee.Core is a collection of helpers and extensions used by my open source libraries.</description>
+    <description>rgvlee.Core is a collection of extensions and helpers used by my open source libraries.</description>
     <copyright>Copyright (c) 2020 Lee Anderson</copyright>
     <tags></tags>
     <repository url="https://github.com/rgvlee/rgvlee.Core" />

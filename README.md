@@ -4,7 +4,7 @@
 
 ## Overview
 
-rgvlee.Core is a collection of helpers and extensions used by my open source libraries.
+rgvlee.Core is a collection of extensions and helpers used by my open source libraries.
 
 ## Resources
 
