@@ -14,14 +14,14 @@ namespace rgvlee.Core.Common.Helpers
         /// </summary>
         /// <typeparam name="TInstance">The instance type.</typeparam>
         /// <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
-        /// <param name="methodInfo">The method to call.</param>
+        /// <param name="methodToCall">The method to call.</param>
         /// <returns>A method call expression representing a call to an instance method that takes no arguments.</returns>
-        public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodInfo)
+        public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodToCall)
         {
-            EnsureArgument.IsNotNull(methodInfo, nameof(methodInfo));
+            EnsureArgument.IsNotNull(methodToCall, nameof(methodToCall));
 
             var parameter = Expression.Parameter(typeof(TInstance));
-            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(parameter, methodInfo), parameter);
+            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(parameter, methodToCall), parameter);
         }
 
         /// <summary>
@@ -29,15 +29,15 @@ namespace rgvlee.Core.Common.Helpers
         /// </summary>
         /// <typeparam name="TInstance">The instance type.</typeparam>
         /// <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
-        /// <param name="methodInfo">The method to call.</param>
-        /// <param name="arguments">The arguments to pass to the method.</param>
+        /// <param name="methodToCall">The method to call.</param>
+        /// <param name="argumentsToPassToMethodBeingCalled">The arguments to pass to the method being called.</param>
         /// <returns>A method call expression representing a call to an instance method that takes the provided arguments.</returns>
-        public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodInfo, params Expression[] arguments)
+        public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodToCall, params Expression[] argumentsToPassToMethodBeingCalled)
         {
-            EnsureArgument.IsNotNull(methodInfo, nameof(methodInfo));
+            EnsureArgument.IsNotNull(methodToCall, nameof(methodToCall));
 
             var parameter = Expression.Parameter(typeof(TInstance));
-            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(parameter, methodInfo, arguments), parameter);
+            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(parameter, methodToCall, argumentsToPassToMethodBeingCalled), parameter);
         }
     }
 }

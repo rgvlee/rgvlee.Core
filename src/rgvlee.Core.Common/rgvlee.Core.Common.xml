@@ -75,7 +75,7 @@
             </summary>
             <typeparam name="TInstance">The instance type.</typeparam>
             <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
-            <param name="methodInfo">The method to call.</param>
+            <param name="methodToCall">The method to call.</param>
             <returns>A method call expression representing a call to an instance method that takes no arguments.</returns>
         </member>
         <member name="M:rgvlee.Core.Common.Helpers.ExpressionHelper.CreateMethodCallExpression``2(System.Reflection.MethodInfo,System.Linq.Expressions.Expression[])">
@@ -84,8 +84,8 @@
             </summary>
             <typeparam name="TInstance">The instance type.</typeparam>
             <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
-            <param name="methodInfo">The method to call.</param>
-            <param name="arguments">The arguments to pass to the method.</param>
+            <param name="methodToCall">The method to call.</param>
+            <param name="argumentsToPassToMethodBeingCalled">The arguments to pass to the method being called.</param>
             <returns>A method call expression representing a call to an instance method that takes the provided arguments.</returns>
         </member>
         <member name="T:rgvlee.Core.Common.Helpers.LoggingHelper">
