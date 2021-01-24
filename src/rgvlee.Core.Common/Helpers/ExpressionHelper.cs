@@ -14,7 +14,7 @@ namespace rgvlee.Core.Common.Helpers
         /// </summary>
         /// <typeparam name="TInstance">The instance type.</typeparam>
         /// <typeparam name="TMethodReturns">The method return type.</typeparam>
-        /// <param name="methodInfo">The instance method.</param>
+        /// <param name="methodInfo">The method to call.</param>
         /// <returns>A a method call expression for an instance method that takes no arguments.</returns>
         public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodInfo)
         {
@@ -29,7 +29,7 @@ namespace rgvlee.Core.Common.Helpers
         /// </summary>
         /// <typeparam name="TInstance">The instance type.</typeparam>
         /// <typeparam name="TMethodReturns">The method return type.</typeparam>
-        /// <param name="methodInfo">The instance method.</param>
+        /// <param name="methodInfo">The method to call.</param>
         /// <param name="arguments">The arguments to pass to the method.</param>
         /// <returns>A a method call expression for an instance method that takes the provided arguments.</returns>
         public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodInfo, params Expression[] arguments)
