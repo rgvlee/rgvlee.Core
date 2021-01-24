@@ -9,8 +9,7 @@
     <license type="file">LICENSE</license>
     <projectUrl>https://github.com/rgvlee/rgvlee.Core</projectUrl>
     <description>rgvlee.Core is a collection of extensions and helpers used by my open source libraries.</description>
-    <copyright>Copyright (c) 2020 Lee Anderson</copyright>
-    <tags></tags>
+    <copyright>Copyright (c) 2021 Lee Anderson</copyright>
     <repository url="https://github.com/rgvlee/rgvlee.Core" />
     <dependencies>
       <group targetFramework=".NETStandard2.0">
@@ -20,6 +19,8 @@
   </metadata>
   <files>
     <file src="src\rgvlee.Core.Common\bin\Release\netstandard2.0\rgvlee.Core.Common.dll" target="lib\netstandard2.0" />
+    <file src="src\rgvlee.Core.Common\bin\Release\netstandard2.0\rgvlee.Core.Common.xml" target="lib\netstandard2.0" />
+    <file src="src\rgvlee.Core.Common\bin\Release\netstandard2.0\rgvlee.Core.Common.pdb" target="lib\netstandard2.0" />
     <file src="LICENSE" />
   </files>
 </package>
