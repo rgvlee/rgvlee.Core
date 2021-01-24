@@ -10,12 +10,12 @@ namespace rgvlee.Core.Common.Helpers
     public static class ExpressionHelper
     {
         /// <summary>
-        ///     Creates a method call expression for an instance method that takes no arguments.
+        ///     Creates a method call expression representing a call to an instance method that takes no arguments.
         /// </summary>
         /// <typeparam name="TInstance">The instance type.</typeparam>
-        /// <typeparam name="TMethodReturns">The method return type.</typeparam>
+        /// <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
         /// <param name="methodInfo">The method to call.</param>
-        /// <returns>A a method call expression for an instance method that takes no arguments.</returns>
+        /// <returns>A method call expression representing a call to an instance method that takes no arguments.</returns>
         public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodInfo)
         {
             EnsureArgument.IsNotNull(methodInfo, nameof(methodInfo));
@@ -25,13 +25,13 @@ namespace rgvlee.Core.Common.Helpers
         }
 
         /// <summary>
-        ///     Creates a method call expression for an instance method that takes the provided arguments.
+        ///     Creates a method call expression representing a call to an instance method that takes the provided arguments.
         /// </summary>
         /// <typeparam name="TInstance">The instance type.</typeparam>
-        /// <typeparam name="TMethodReturns">The method return type.</typeparam>
+        /// <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
         /// <param name="methodInfo">The method to call.</param>
         /// <param name="arguments">The arguments to pass to the method.</param>
-        /// <returns>A a method call expression for an instance method that takes the provided arguments.</returns>
+        /// <returns>A method call expression representing a call to an instance method that takes the provided arguments.</returns>
         public static Expression<Func<TInstance, TMethodReturns>> CreateMethodCallExpression<TInstance, TMethodReturns>(MethodInfo methodInfo, params Expression[] arguments)
         {
             EnsureArgument.IsNotNull(methodInfo, nameof(methodInfo));
