@@ -20,8 +20,8 @@ namespace rgvlee.Core.Common.Helpers
         {
             EnsureArgument.IsNotNull(methodToCall, nameof(methodToCall));
 
-            var parameter = Expression.Parameter(typeof(TInstance));
-            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(parameter, methodToCall), parameter);
+            var instance = Expression.Parameter(typeof(TInstance));
+            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(instance, methodToCall), instance);
         }
 
         /// <summary>
@@ -36,8 +36,8 @@ namespace rgvlee.Core.Common.Helpers
         {
             EnsureArgument.IsNotNull(methodToCall, nameof(methodToCall));
 
-            var parameter = Expression.Parameter(typeof(TInstance));
-            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(parameter, methodToCall, argumentsToPassToMethodBeingCalled), parameter);
+            var instance = Expression.Parameter(typeof(TInstance));
+            return Expression.Lambda<Func<TInstance, TMethodReturns>>(Expression.Call(instance, methodToCall, argumentsToPassToMethodBeingCalled), instance);
         }
     }
 }
