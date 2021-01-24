@@ -64,6 +64,30 @@
             <param name="argumentName">The enumerable argument name.</param>
             <returns>The enumerable argument.</returns>
         </member>
+        <member name="T:rgvlee.Core.Common.Helpers.ExpressionHelper">
+            <summary>
+                A helper for creating expressions.
+            </summary>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.ExpressionHelper.CreateMethodCallExpression``2(System.Reflection.MethodInfo)">
+            <summary>
+                Creates a method call expression representing a call to an instance method that takes no arguments.
+            </summary>
+            <typeparam name="TInstance">The instance type.</typeparam>
+            <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
+            <param name="methodToCall">The method to call.</param>
+            <returns>A method call expression representing a call to an instance method that takes no arguments.</returns>
+        </member>
+        <member name="M:rgvlee.Core.Common.Helpers.ExpressionHelper.CreateMethodCallExpression``2(System.Reflection.MethodInfo,System.Linq.Expressions.Expression[])">
+            <summary>
+                Creates a method call expression representing a call to an instance method that takes the provided arguments.
+            </summary>
+            <typeparam name="TInstance">The instance type.</typeparam>
+            <typeparam name="TMethodReturns">The return type of the method being called.</typeparam>
+            <param name="methodToCall">The method to call.</param>
+            <param name="argumentsToPassToMethodBeingCalled">The arguments to pass to the method being called.</param>
+            <returns>A method call expression representing a call to an instance method that takes the provided arguments.</returns>
+        </member>
         <member name="T:rgvlee.Core.Common.Helpers.LoggingHelper">
             <summary>
                 Logging helper methods.

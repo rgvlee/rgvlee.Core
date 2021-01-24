@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.Extensions.Logging;
 
 namespace rgvlee.Core.Common.Helpers
@@ -25,6 +26,8 @@ namespace rgvlee.Core.Common.Helpers
         /// <returns>A new logger instance.</returns>
         public static ILogger<T> CreateLogger<T>()
         {
+            Debug.Print("CreateLogger: start");
+            Debug.Print($"T: {typeof(T)}");
             return LoggerFactory.CreateLogger<T>();
         }
 
@@ -35,7 +38,11 @@ namespace rgvlee.Core.Common.Helpers
         /// <returns>A new logger instance.</returns>
         public static ILogger CreateLogger(Type type)
         {
+            Debug.Print("CreateLogger: start");
+
             EnsureArgument.IsNotNull(type, nameof(type));
+
+            Debug.Print($"type: {type}");
 
             return LoggerFactory.CreateLogger(type);
         }

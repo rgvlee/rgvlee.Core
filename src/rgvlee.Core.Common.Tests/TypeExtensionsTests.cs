@@ -19,19 +19,19 @@ namespace rgvlee.Core.Common.Tests
         }
 
         [Test]
-        public void GetDefaultValue_Bool_ReturnsDefaultInt()
+        public void GetDefaultValue_Bool_ReturnsDefaultBool()
         {
             Assert.That(typeof(bool).GetDefaultValue(), Is.EqualTo(default(bool)));
         }
 
         [Test]
-        public void GetDefaultValue_String_ReturnsDefaultInt()
+        public void GetDefaultValue_String_ReturnsDefaultString()
         {
             Assert.That(typeof(string).GetDefaultValue(), Is.EqualTo(default(string)));
         }
 
         [Test]
-        public void GetDefaultValue_TypeWithParameterlessConstructor_ReturnsDefaultInt()
+        public void GetDefaultValue_TypeWithParameterlessConstructor_ReturnsNull()
         {
             Assert.That(typeof(TypeWithParameterlessConstructor).GetDefaultValue(), Is.Null);
         }
