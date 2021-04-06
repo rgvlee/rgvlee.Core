@@ -8,6 +8,8 @@ namespace rgvlee.Core.Common.Helpers
     {
         private static readonly MethodInfo _taskFromResultMethod = typeof(Task).GetMethod(nameof(Task.FromResult));
 
+        public static readonly MethodInfo StringEqualsMethodWithStringArgument = typeof(string).GetMethod("Equals", new[] { typeof(string) });
+
         public static MethodInfo TaskFromResultMethod<T>()
         {
             return TaskFromResultMethod(typeof(T));
