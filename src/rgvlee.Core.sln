@@ -15,8 +15,8 @@ ProjectSection(SolutionItems) = preProject
 	..\rgvlee.Core.nuspec = ..\rgvlee.Core.nuspec
 	..\README.md = ..\README.md
 	..\TODO.md = ..\TODO.md
-	..\dotcover.xml = ..\dotcover.xml
-	..\rgvlee.Core.dcvr = ..\rgvlee.Core.dcvr
+	..\.github\workflows\continuous-integration-checks.yml = ..\.github\workflows\continuous-integration-checks.yml
+	..\.github\workflows\release.yml = ..\.github\workflows\release.yml
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8F6B7100-6BE0-4C86-9FAA-E6C04C5D2F4D}"
