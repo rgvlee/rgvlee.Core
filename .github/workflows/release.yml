@@ -34,6 +34,6 @@ jobs:
           nuget pack -Version ${{ github.event.release.tag_name }} -Symbols -SymbolPackageFormat snupkg rgvlee.Core.nuspec
 
       - name: Push
-          run: |
-            nuget push -ApiKey ${{ secrets.NUGET_API_KEY }} **/*.nupkg
-            nuget push -SymbolApiKey ${{ secrets.NUGET_API_KEY }} **/*.snupkg
+        run: |
+          nuget push -ApiKey ${{ secrets.NUGET_API_KEY }} **/*.nupkg
+          nuget push -SymbolApiKey ${{ secrets.NUGET_API_KEY }} **/*.snupkg
