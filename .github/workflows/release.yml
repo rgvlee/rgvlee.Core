@@ -37,4 +37,3 @@ jobs:
       - name: Push
         run: |
           nuget push **/*\.nupkg -Source https://api.nuget.org/v3/index.json
-          nuget push **/*\.snupkg -Source https://api.nuget.org/v3/index.json
