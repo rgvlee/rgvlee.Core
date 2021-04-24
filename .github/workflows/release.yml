@@ -31,7 +31,7 @@ jobs:
 
       - name: Pack
         run: |
-          nuget pack -Version ${{ github.event.release.tag_name }} -Symbols -SymbolPackageFormat snupkg rgvlee.Core.nuspec
+          nuget pack -Version ${{ github.event.release.name }} -Symbols -SymbolPackageFormat snupkg rgvlee.Core.nuspec
 
       - name: Push
         run: |
