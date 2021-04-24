@@ -21,6 +21,7 @@ jobs:
       - name: Setup NuGet
         uses: nuget/setup-nuget@v1
         with:
+          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
           nuget-version: latest
 
       - name: Restore dependencies
@@ -31,9 +32,9 @@ jobs:
 
       - name: Pack
         run: |
-          nuget pack -Version ${{ github.event.release.name }} -Symbols -SymbolPackageFormat snupkg rgvlee.Core.nuspec
+          nuget pack rgvlee.Core.nuspec -Version ${{ github.event.release.name }} -Symbols -SymbolPackageFormat snupkg
 
       - name: Push
         run: |
-          nuget push -ApiKey ${{ secrets.NUGET_API_KEY }} **/*.nupkg
-          nuget push -SymbolApiKey ${{ secrets.NUGET_API_KEY }} **/*.snupkg
+          nuget push **/*.nupkg -Source https://api.nuget.org/v3/index.json
+          nuget push **/*.snupkg -Source https://api.nuget.org/v3/index.json
