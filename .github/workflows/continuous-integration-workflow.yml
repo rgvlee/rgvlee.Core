@@ -1,6 +1,9 @@
-name: Continuous Integration Checks
+name: Continuous integration workflow
 
-on: push
+on:
+  push
+  pull_request:
+    types: [opened]
 
 jobs:
   build-and-test:
