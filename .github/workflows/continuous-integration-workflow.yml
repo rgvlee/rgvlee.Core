@@ -1,7 +1,7 @@
 name: Continuous integration workflow
 
 on:
-  push
+  push:
   pull_request:
     types: [opened]
 
