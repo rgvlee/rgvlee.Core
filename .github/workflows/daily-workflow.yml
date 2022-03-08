@@ -2,7 +2,7 @@ name: Daily workflow
 
 on:
   schedule:
-    - cron:  '@hourly'
+    - cron:  '0 * * * *'
 
 jobs:
   build-and-test:
