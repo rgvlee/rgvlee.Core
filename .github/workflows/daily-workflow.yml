@@ -2,7 +2,7 @@ name: Daily workflow
 
 on:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 * * * *'
 
 jobs:
   build-and-test:
@@ -28,7 +28,7 @@ jobs:
       run: dotnet test src --configuration Release --no-build --verbosity diagnostic /p:CollectCoverage=\"false\" /p:Exclude=\"[*.Tests]*\" /p:SkipAutoProps=\"false\" /p:IncludeTestAssembly=\"false\" -m:1
 
     - name: Update dependencies
-      run: dotnet add package Microsoft.Extensions.Logging
+      run: dotnet add src/rgvlee.Core.Common package Microsoft.Extensions.Logging
 
     - name: Test
       run: dotnet test src --configuration Release --verbosity diagnostic /p:CollectCoverage=\"false\" /p:Exclude=\"[*.Tests]*\" /p:SkipAutoProps=\"false\" /p:IncludeTestAssembly=\"false\" -m:1
