@@ -2,12 +2,15 @@ name: Daily workflow
 
 on:
   schedule:
-    - cron:  '0 9 * * *'
+    - cron:  '0 * * * *'
 
 jobs:
   build-and-test:
     name: Build and test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet: [ '2.1.x', '3.1.x', '5.0.x', '6.0.x' ]
 
     steps:
     - name: Checkout
@@ -16,7 +19,7 @@ jobs:
     - name: Setup dotnet
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: latest
+        dotnet-version: ${{ matrix.dotnet }}
 
     - name: Restore dependencies
       run: dotnet restore src
