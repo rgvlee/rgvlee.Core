@@ -36,4 +36,8 @@ jobs:
       uses: codacy/codacy-coverage-reporter-action@master
       with:
         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        coverage-reports: './CoverageResults/coverage.netcoreapp2.1.opencover.xml','./CoverageResults/coverage.netcoreapp3.1.opencover.xml','./CoverageResults/coverage.net5.0.opencover.xml','./CoverageResults/coverage.net6.0.opencover.xml'
+        coverage-reports: |
+          ./CoverageResults/coverage.netcoreapp2.1.opencover.xml
+          ./CoverageResults/coverage.netcoreapp3.1.opencover.xml
+          ./CoverageResults/coverage.net5.0.opencover.xml
+          ./CoverageResults/coverage.net6.0.opencover.xml
