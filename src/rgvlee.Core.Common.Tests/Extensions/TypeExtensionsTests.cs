@@ -2,9 +2,9 @@
 using NUnit.Framework;
 using rgvlee.Core.Common.Extensions;
 
-namespace rgvlee.Core.Common.Tests
+namespace rgvlee.Core.Common.Tests.Extensions
 {
-    public class TypeExtensionsTests
+    public class TypeExtensionsTests : BaseForTests
     {
         [Test]
         public void GetDefaultValue_Guid_ReturnsDefaultGuid()

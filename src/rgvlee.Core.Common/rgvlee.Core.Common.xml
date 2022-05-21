@@ -40,29 +40,30 @@
                 Ensures that a string argument is not null or empty.
             </summary>
             <param name="argument">The string argument.</param>
-            <param name="argumentName">The argument name.</param>
+            <param name="argumentExpression">The argument expression.</param>
             <returns>The string argument.</returns>
             <exception cref="T:System.ArgumentNullException">If the string argument is null.</exception>
             <exception cref="T:System.ArgumentException">If the string argument is empty.</exception>
         </member>
         <member name="M:rgvlee.Core.Common.Helpers.EnsureArgument.IsNotNull``1(``0,System.String)">
             <summary>
-                Ensures that an argument is not null.
+                Ensures that an object argument is not null.
             </summary>
-            <typeparam name="T">The argument type.</typeparam>
-            <param name="argument">The argument.</param>
-            <param name="argumentName">The argument name.</param>
-            <returns>The argument.</returns>
-            <exception cref="T:System.ArgumentNullException">If the argument is null.</exception>
+            <typeparam name="T">The object argument type.</typeparam>
+            <param name="argument">The object argument.</param>
+            <param name="argumentExpression">The argument expression.</param>
+            <returns>The object argument.</returns>
+            <exception cref="T:System.ArgumentNullException">If the object argument is null.</exception>
         </member>
         <member name="M:rgvlee.Core.Common.Helpers.EnsureArgument.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
             <summary>
-                Ensures that a sequence is not empty.
+                Ensures that a sequence argument is not empty.
             </summary>
-            <typeparam name="T">The enumerable item type.</typeparam>
-            <param name="argument">The enumerable argument.</param>
-            <param name="argumentName">The enumerable argument name.</param>
-            <returns>The enumerable argument.</returns>
+            <typeparam name="T">The sequence argument item type.</typeparam>
+            <param name="argument">The sequence argument.</param>
+            <param name="argumentExpression">The argument expression.</param>
+            <returns>The sequence argument.</returns>
+            <exception cref="T:System.ArgumentException">If the sequence argument is empty.</exception>
         </member>
         <member name="T:rgvlee.Core.Common.Helpers.ExpressionHelper">
             <summary>

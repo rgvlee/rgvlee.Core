@@ -15,7 +15,6 @@ ProjectSection(SolutionItems) = preProject
 	..\rgvlee.Core.nuspec = ..\rgvlee.Core.nuspec
 	..\README.md = ..\README.md
 	..\TODO.md = ..\TODO.md
-	..\.github\workflows\daily-workflow.yml = ..\.github\workflows\daily-workflow.yml
 	..\.github\workflows\release-workflow.yml = ..\.github\workflows\release-workflow.yml
 	..\.github\workflows\continuous-integration-workflow.yml = ..\.github\workflows\continuous-integration-workflow.yml
 EndProjectSection
