@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+#if NET6_0_OR_GREATER
+using System.Runtime.CompilerServices;
+#endif
 
 namespace rgvlee.Core.Common.Helpers
 {
