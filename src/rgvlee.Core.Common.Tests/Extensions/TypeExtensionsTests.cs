@@ -59,23 +59,15 @@ namespace rgvlee.Core.Common.Tests.Extensions
             });
         }
 
-        private class TypeWithParameterlessConstructor
-        {
-        }
+        private class TypeWithParameterlessConstructor { }
 
-        private class Foo
-        {
-        }
+        private class Foo { }
 
-        private class Bar : Foo
-        {
-        }
+        private class Bar : Foo { }
 
         private class Baz
         {
-            public Baz(Foo foo)
-            {
-            }
+            public Baz(Foo foo) { }
         }
     }
 }
