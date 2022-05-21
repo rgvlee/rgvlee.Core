@@ -2,9 +2,9 @@
 using NUnit.Framework;
 using rgvlee.Core.Common.Extensions;
 
-namespace rgvlee.Core.Common.Tests
+namespace rgvlee.Core.Common.Tests.Extensions
 {
-    public class TypeExtensionsTests
+    public class TypeExtensionsTests : BaseForTests
     {
         [Test]
         public void GetDefaultValue_Guid_ReturnsDefaultGuid()
@@ -59,15 +59,23 @@ namespace rgvlee.Core.Common.Tests
             });
         }
 
-        private class TypeWithParameterlessConstructor { }
+        private class TypeWithParameterlessConstructor
+        {
+        }
 
-        private class Foo { }
+        private class Foo
+        {
+        }
 
-        private class Bar : Foo { }
+        private class Bar : Foo
+        {
+        }
 
         private class Baz
         {
-            public Baz(Foo foo) { }
+            public Baz(Foo foo)
+            {
+            }
         }
     }
 }
