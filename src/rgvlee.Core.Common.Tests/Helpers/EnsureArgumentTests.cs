@@ -33,11 +33,7 @@ namespace rgvlee.Core.Common.Tests.Helpers
             Invoking(() => EnsureArgument.IsNotNullOrEmpty(emptyString, nameof(emptyString))).Should()
 #endif
                 .ThrowExactly<ArgumentException>()
-#if NETCOREAPP3_1_OR_GREATER
-                .WithMessage($"Value cannot be empty. (Parameter '{nameof(emptyString)}')");
-#else
-                .WithMessage($"Value cannot be empty.\nParameter name: {nameof(emptyString)}");
-#endif
+                .WithMessage(nameof(emptyString));
         }
     }
 }

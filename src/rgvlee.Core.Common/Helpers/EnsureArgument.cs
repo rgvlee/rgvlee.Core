@@ -13,13 +13,13 @@ namespace rgvlee.Core.Common.Helpers
     public static class EnsureArgument
     {
         /// <summary>
-        ///     Ensures that a string is not null or empty.
+        ///     Ensures that a string argument is not null or empty.
         /// </summary>
-        /// <param name="argument">The string.</param>
+        /// <param name="argument">The string argument.</param>
         /// <param name="argumentExpression">The argument expression.</param>
-        /// <returns>The string.</returns>
-        /// <exception cref="ArgumentNullException">If the string is null.</exception>
-        /// <exception cref="ArgumentException">If the string is empty.</exception>
+        /// <returns>The string argument.</returns>
+        /// <exception cref="ArgumentNullException">If the string argument is null.</exception>
+        /// <exception cref="ArgumentException">If the string argument is empty.</exception>
         public static string IsNotNullOrEmpty(
             string argument,
 #if NET6_0_OR_GREATER
@@ -27,23 +27,24 @@ namespace rgvlee.Core.Common.Helpers
 #endif
             string argumentExpression = default)
         {
-            if (!string.IsNullOrEmpty(argument)) return argument;
+            if (!string.IsNullOrEmpty(argument))
+            {
+                return argument;
+            }
 
             IsNotNullOrEmpty(argumentExpression, nameof(argumentExpression));
-            var ex = argument == null
-                ? new ArgumentNullException(argumentExpression)
-                : new ArgumentException("Value cannot be empty.", argumentExpression);
+            var ex = argument == null ? new ArgumentNullException(argumentExpression) : new ArgumentException(argumentExpression);
             throw ex;
         }
 
         /// <summary>
-        ///     Ensures that an object is not null.
+        ///     Ensures that an object argument is not null.
         /// </summary>
-        /// <typeparam name="T">The object type.</typeparam>
-        /// <param name="argument">The object.</param>
+        /// <typeparam name="T">The object argument type.</typeparam>
+        /// <param name="argument">The object argument.</param>
         /// <param name="argumentExpression">The argument expression.</param>
-        /// <returns>The object.</returns>
-        /// <exception cref="ArgumentNullException">If the object is null.</exception>
+        /// <returns>The object argument.</returns>
+        /// <exception cref="ArgumentNullException">If the object argument is null.</exception>
         public static T IsNotNull<T>(
             T argument,
 #if NET6_0_OR_GREATER
@@ -52,7 +53,10 @@ namespace rgvlee.Core.Common.Helpers
             string argumentExpression = default)
             where T : class
         {
-            if (argument != null) return argument;
+            if (argument != null)
+            {
+                return argument;
+            }
 
             IsNotNullOrEmpty(argumentExpression, nameof(argumentExpression));
             var ex = new ArgumentNullException(argumentExpression);
@@ -60,13 +64,13 @@ namespace rgvlee.Core.Common.Helpers
         }
 
         /// <summary>
-        ///     Ensures that a sequence is not empty.
+        ///     Ensures that a sequence argument is not empty.
         /// </summary>
-        /// <typeparam name="T">The sequence item type.</typeparam>
-        /// <param name="argument">The sequence.</param>
+        /// <typeparam name="T">The sequence argument item type.</typeparam>
+        /// <param name="argument">The sequence argument.</param>
         /// <param name="argumentExpression">The argument expression.</param>
-        /// <returns>The sequence.</returns>
-        /// <exception cref="ArgumentException">If the sequence is empty.</exception>
+        /// <returns>The sequence argument.</returns>
+        /// <exception cref="ArgumentException">If the sequence argument is empty.</exception>
         public static IEnumerable<T> IsNotEmpty<T>(
             IEnumerable<T> argument,
 #if NET6_0_OR_GREATER
@@ -76,7 +80,10 @@ namespace rgvlee.Core.Common.Helpers
         {
             IsNotNull(argument, argumentExpression);
 
-            if (argument.Any()) return argument;
+            if (argument.Any())
+            {
+                return argument;
+            }
 
             IsNotNullOrEmpty(argumentExpression, nameof(argumentExpression));
             var ex = new ArgumentException(argumentExpression);
